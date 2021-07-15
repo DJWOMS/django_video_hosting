@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Masonry Responsive Template</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+  <script src="{% static 'js/vendor/modernizr-2.6.2.min.js' %}"></script>
+  <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div id="loader-wrapper">
+  <div id="loader"></div>
+</div>
+
+<div class="content-bg"></div>
+<div class="bg-overlay"></div>
+
+<!-- SITE TOP -->
+<div class="site-top">
+  <div class="site-header clearfix">
+    <div class="container">
+      <a href="/" class="site-brand pull-left"><strong>Django</strong> video hosting</a>
+      <div class="social-icons pull-right">
+        <ul>
+          <li><a href="#" class="fa fa-facebook"></a></li>
+          <li><a href="#" class="fa fa-twitter"></a></li>
+          <li><a href="#" class="fa fa-behance"></a></li>
+          <li><a href="#" class="fa fa-dribbble"></a></li>
+          <li><a href="#" class="fa fa-google-plus"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div> <!-- .site-header -->
+</div> <!-- .site-top -->
+
+{% block content %}
+{% endblock content %}
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright-text">Copyright &copy; 2084 Company Name
+          | Photos by <a rel="nofollow" href="http://unsplash.com">Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="{% static 'js/vendor/jquery-1.10.2.min.js' %}"></script>
+<script src="{% static 'js/min/plugins.min.js' %}"></script>
+<script src="{% static 'js/min/main.min.js' %}"></script>
+
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+<!-- Preloader -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function () { // makes sure the whole site is loaded
+        $('#loader').fadeOut(); // will first fade out the loading animation
+        $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow-y': 'visible'});
+    })
+    //]]>
+</script>
+</body>
+</html>
